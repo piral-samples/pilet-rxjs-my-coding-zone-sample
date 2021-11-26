@@ -1,0 +1,25 @@
+name: Publish Demo
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install Dependencies
+        run: |
+          npm install
+      - name: Publish Pilet
+        run: |
+          npx pilet publish --fresh --url https://feed.piral.cloud/api/v1/pilet/my-coding-zone-sample --api-key $PIRAL_FEED_TOKEN
+        env:
+          PIRAL_FEED_TOKEN: ${{ secrets.PIRAL_FEED_TOKEN }}

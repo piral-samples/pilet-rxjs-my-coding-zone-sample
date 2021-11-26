@@ -1,0 +1,56 @@
+{
+  "name": "@my-coding-zone/rxjs",
+  "version": "0.0.1",
+  "description": "The rxjs-fruits.com sample as pilet",
+  "keywords": [
+    "pilet"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "my-coding-zone-piral-app": "0.1.0",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/react-router": "latest",
+    "@types/react-router-dom": "latest",
+    "@types/node": "latest",
+    "typescript": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router": "5.2.1",
+    "react-router-dom": "5.3.0",
+    "history": "4.10.1",
+    "tslib": "2.3.1",
+    "path-to-regexp": "1.8.0",
+    "@libre/atom": "1.3.3",
+    "@dbeining/react-atom": "4.1.21",
+    "piral-cli": "^0.14.3",
+    "piral-cli-esbuild": "^0.14.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-dom": "*",
+    "react-router": "*",
+    "react-router-dom": "*",
+    "history": "*",
+    "tslib": "*",
+    "path-to-regexp": "*",
+    "@libre/atom": "*",
+    "@dbeining/react-atom": "*",
+    "my-coding-zone-piral-app": "*"
+  },
+  "scripts": {
+    "start": "pilet debug",
+    "build": "pilet build",
+    "upgrade": "pilet upgrade"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "source": "src/index.tsx",
+  "piral": {
+    "comment": "Keep this section to use the Piral CLI.",
+    "name": "my-coding-zone-piral-app"
+  },
+  "peerModules": []
+}
